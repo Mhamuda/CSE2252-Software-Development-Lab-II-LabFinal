@@ -1,0 +1,39 @@
+const express = require('express')
+const dogRouter = express.Router()
+
+dogRouter.get('/',(req,res)=>{
+    res.send('This is dog router')
+})
+
+dogRouter.get('/:dogid',(req,res)=>{
+    res.send('sending dogid '+req.params.dogid)
+})
+
+dogRouter.post('/',(req,res)=>{
+    res.send('Posting dog router')
+})
+
+dogRouter.post('/:dogid',(req,res)=>{
+    res.send('Posting dogid '+req.params.dogid)
+})
+
+dogRouter.put('/',(req,res)=>{
+    res.send('Puting dog router')
+})
+
+dogRouter.put('/:dogid',(req,res)=>{
+    res.send('Puting dogid '+req.params.dogid)
+})
+
+dogRouter.delete('/',(req,res)=>{
+    res.send('Deleting dog router')
+})
+
+dogRouter.delete('/:dogid',(req,res)=>{
+    res.send('Deleting dogid '+req.params.dogid)
+})
+
+
+
+
+module.exports = dogRouter
